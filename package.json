@@ -1,0 +1,17 @@
+{
+  "name": "radio-reaper",
+  "version": "0.0.0-alpha",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "test": "vitest",
+    "test:eslint": "eslint ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "neostandard": "^0.5.1",
+    "vitest": "^1.6.0"
+  }
+}
