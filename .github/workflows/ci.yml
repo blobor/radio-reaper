@@ -1,13 +1,15 @@
 name: App CI/CD
 
-on:
-  push:
-    branches: [ $default-branch ]
+on: [push]
+
+permissions:
+  contents: read
 
 jobs:
   test_and_build:
     name: Test and Build
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
+    timeout-minutes: 30
     steps:
     - name: Checkout
       uses: actions/checkout@v4
@@ -50,14 +52,15 @@ jobs:
         if-no-files-found: error
   deploy:
     name: Deploy
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
+    timeout-minutes: 30
     needs: test_and_build
     permissions:
       id-token: write   # This is required for requesting the JWT
       contents: read    # This is required for actions/checkout
     environment:
-      name: 'staging'
-      url: ${{ env.DEPLOY_URL }}
+      name: staging
+      url: https://beta.radio.lobor.dev
 
     steps:
     - name: Download artifact from build job
