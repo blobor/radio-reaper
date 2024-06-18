@@ -1,3 +1,7 @@
+export const metadata = {
+  title: 'Radio Reaper',
+}
+
 export default function RootLayout({
     children,
   }: {
