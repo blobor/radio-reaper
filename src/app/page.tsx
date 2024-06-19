@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from 'react'
+import { useState, Fragment } from 'react'
 
 import { generateAESKey } from "../aes"
 import { generateRSAKey } from '../rsa'
@@ -16,7 +16,9 @@ export default function Page() {
   }
 
   return (
-    <section>
+    <Fragment>
+      <header>
+      </header>
       <section>
         <button type='button' onClick={onAesGenerate}>Generate AES 256 key</button>
         <output name="AES 256 key">{aesKey}</output>
@@ -25,6 +27,6 @@ export default function Page() {
         <button type='button' onClick={onRsaGenerate}>Generate RSA key</button>
         <output name="RSA key">{rasKey}</output>
       </section>
-    </section>
+    </Fragment>
   )
 }
