@@ -1,0 +1,12 @@
+.header {
+    line-height: 4rem;
+    display: flex;
+}
+
+.navigation {
+    display: flex;
+}
+
+.navigation__link {
+    padding: .65rem 1.1rem
+}
