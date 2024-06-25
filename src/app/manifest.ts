@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next'
 
-export default function manifest(): MetadataRoute.Manifest {
+const manifest = (): MetadataRoute.Manifest => {
     return {
         name: 'Radio Reaper',
         short_name: 'Radio Reaper',
@@ -52,3 +52,5 @@ export default function manifest(): MetadataRoute.Manifest {
         ],
     }
 }
+
+export default manifest
