@@ -11,6 +11,7 @@ const manifest = (): MetadataRoute.Manifest => {
         theme_color: '#b4a088',
         lang: 'en-US',
         orientation: 'any',
+        description: 'Set of tools for portable radios',
         icons: [
             {
                 src: 'manifest/icon-44.png',
@@ -21,6 +22,7 @@ const manifest = (): MetadataRoute.Manifest => {
                 src: 'manifest/icon-192.png',
                 sizes: '192x192',
                 type: 'image/png',
+                purpose: 'any',
             },
             {
                 src: 'manifest/icon-256.png',
